@@ -322,6 +322,10 @@ export class D2LNote extends D2LTypographyMixin(LocalizeMixin(LitElement)) {
 				}
 
 				.d2l-note-text {
+					word-break: break-word; /* Not universally supported */
+					word-wrap: break-word;  /* Alternate for above */
+					overflow-wrap: anywhere; /* Overrides word-* rules, where supported */
+
 					@apply --d2l-note-text;
 				}
 				.paragraph {
