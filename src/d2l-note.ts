@@ -374,9 +374,9 @@ export class D2LNote extends D2LTypographyMixin(LocalizeMixin(LitElement)) {
 				}
 
 				d2l-more-less {
+					flex: 1;
 					position: relative;
 					max-width: 100%;
-					flex: 1;
 				}
 
 				.skeleton {
