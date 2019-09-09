@@ -1,8 +1,10 @@
 import d2lIntl from 'd2l-intl';
 import IntlMessageFormat from 'intl-messageformat/src/main';
+import { LangTerm } from '../lang';
 import {
 	property
 } from 'lit-element';
+
 window.IntlMessageFormat = IntlMessageFormat;
 
 declare global {
@@ -120,7 +122,7 @@ export function LocalizeMixin<B extends Constructor<{
 		 * string should be passed in order, as follows:
 		 * `localize(stringKey, param1Name, param1Value, param2Name, param2Value)`
 		*/
-		localize(key: string, ...args: any[]) {
+		localize(key: LangTerm, ...args: any[]) {
 			return this._computeLocalize(this.__language, this.__resources, key, ...args);
 		}
 

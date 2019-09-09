@@ -1,6 +1,7 @@
 import 'd2l-button/d2l-button-subtle';
 import 'd2l-colors/d2l-colors';
 import './d2l-note';
+
 /**
  * Import LitElement base class, html helper function,
  * and TypeScript decorators
@@ -10,6 +11,7 @@ import {
 } from 'lit-element';
 
 import { D2LTypographyMixin } from './mixins/d2l-typography-mixin';
+import { langResources } from './lang';
 import { LocalizeMixin } from './mixins/localize-mixin';
 import { repeat } from 'lit-html/directives/repeat';
 
@@ -207,17 +209,7 @@ export class D2LNotes extends D2LTypographyMixin(LocalizeMixin(LitElement)) {
 	 */
 	static EVENT_LOAD_LESS = 'd2l-notes-load-less';
 
-	__langResources: {
-		[key: string]: {
-			[key in 'more' | 'less' | 'empty']: string;
-		};
-	} = {
-		'en': {
-			'more': 'Load More Notes',
-			'less': 'Load Less Notes',
-			'empty': 'No Notes'
-		}
-	}
+	__langResources = langResources;
 
 	getLanguage(langs: string[]) {
 		for (let i = 0; i < langs.length; i++) {

@@ -3,6 +3,7 @@ import 'd2l-icons/tier2-icons';
 import 'd2l-button/d2l-button';
 import 'd2l-button/d2l-button-icon';
 import 'd2l-alert/d2l-alert';
+
 /**
  * Import LitElement base class, html helper function,
  * and TypeScript decorators
@@ -12,6 +13,7 @@ import {
 } from 'lit-element';
 
 import { IronA11yAnnouncer } from '@polymer/iron-a11y-announcer/iron-a11y-announcer';
+import { langResources } from './lang';
 import { LocalizeMixin } from './mixins/localize-mixin';
 
 /**
@@ -110,17 +112,7 @@ export class D2LNoteEdit extends LocalizeMixin(LitElement) {
 	 */
 	static EVENT_DISCARD = 'd2l-note-edit-discard';
 
-	__langResources: {
-		[key: string]: {
-			[key in 'add' | 'save' | 'discard']: string;
-		};
-	} = {
-		'en': {
-			'add': 'Add',
-			'save': 'Save',
-			'discard': 'Discard'
-		}
-	}
+	__langResources = langResources;
 
 	connectedCallback() {
 		super.connectedCallback();

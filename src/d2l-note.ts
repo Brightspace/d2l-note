@@ -9,6 +9,7 @@ import 'd2l-more-less/d2l-more-less';
 import 'd2l-colors/d2l-colors';
 import 'd2l-users/components/d2l-profile-image';
 import './d2l-note-edit';
+
 /**
  * Import LitElement base class, html helper function,
  * and TypeScript decorators
@@ -20,6 +21,7 @@ import {
 import { LocalizeMixin, LocalizeMixinProto } from './mixins/localize-mixin';
 
 import { D2LTypographyMixin } from './mixins/d2l-typography-mixin';
+import { langResources } from './lang';
 import { repeat } from 'lit-html/directives/repeat';
 
 /**
@@ -200,20 +202,7 @@ export class D2LNote extends D2LTypographyMixin(LocalizeMixin(LitElement)) {
 	 */
 	static EVENT_DELETE = 'd2l-note-delete';
 
-	__langResources: {
-		[key: string]: {
-			[key in 'SubtextEdited' | 'me' | 'contextMenu' | 'edit' | 'delete' | 'private']: string;
-		};
-	} = {
-		'en': {
-			'SubtextEdited': '{0} (Edited)',
-			'me': 'Me',
-			'contextMenu': 'Context Menu',
-			'edit': 'Edit',
-			'delete': 'Delete',
-			'private': 'Private'
-		}
-	}
+	__langResources = langResources;
 
 	getLanguage(langs: string[]) {
 		for (let i = 0; i < langs.length; i++) {
@@ -269,7 +258,7 @@ export class D2LNote extends D2LTypographyMixin(LocalizeMixin(LitElement)) {
 		// Need this step because the formatter doesn't parse the time when using a custom format
 		const dateTime = createdAtDate ? this.formatTime(createdAtDate, { format: date }) : undefined;
 
-		const subText = this.updatedat ? this.localize('SubtextEdited', dateTime) : dateTime;
+		const subText = this.updatedat ? this.localize('subtextEdited', dateTime) : dateTime;
 		const showDropdown = this.canedit || this.candelete;
 		return html`
 			<style>${D2LNote.d2lTypographyStyle}</style>

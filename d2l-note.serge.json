@@ -1,0 +1,5 @@
+{
+    "name": "D2L Note",
+    "source_dir": "src/lang/json",
+    "output_file_path": "src/lang/json/%CULTURE%.json"
+}
