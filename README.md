@@ -32,7 +32,7 @@ By using either **[increment major]** or **[increment patch]** notation inside y
 
 ## Localization
 
-This repo uses [Serge](https://docs.dev.d2l/index.php/Special:Search?search=Serge.io&fulltext=Search) for localization. On any changes to langterm data files (eg. due to adding new lang terms, or merging an automated PR that provides updated translations), you must run
+This repo uses [Serge](https://docs.dev.d2l/index.php/Serge-Localize) for localization. On any changes to langterm data files (eg. due to adding new lang terms, or merging an automated PR that provides updated translations), you must run
 ```
 npm run localize
 ```
