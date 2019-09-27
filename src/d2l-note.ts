@@ -206,7 +206,7 @@ export class D2LNote extends D2LTypographyMixin(LocalizeMixin(LitElement)) {
 
 	getLanguage(langs: string[]) {
 		for (let i = 0; i < langs.length; i++) {
-			if (this.__langResources[langs[i]]) {
+			if (this.__langResources[langs[i].toLocaleLowerCase()]) {
 				return langs[i];
 			}
 		}
