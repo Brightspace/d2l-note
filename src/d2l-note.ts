@@ -16,7 +16,7 @@ import './d2l-note-edit';
 import {
 	customElement, html, LitElement, property
 } from 'lit-element';
-import { formatDateTime, DateTimeDescriptor } from '@brightspace-ui/intl/lib/dateTime.js';
+import { DateTimeDescriptor, formatDateTime } from '@brightspace-ui/intl/lib/dateTime.js';
 
 import { bodyStandardStyles } from '@brightspace-ui/core/components/typography/styles.js';
 import { langResources } from './lang';
