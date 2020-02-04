@@ -16,7 +16,7 @@ import './d2l-note-edit';
 import {
 	customElement, html, LitElement, property
 } from 'lit-element';
-import { formatDateTime, formatTime } from '@brightspace-ui/intl/lib/dateTime.js';
+import { formatDateTime, DateTimeDescriptor } from '@brightspace-ui/intl/lib/dateTime.js';
 
 import { bodyStandardStyles } from '@brightspace-ui/core/components/typography/styles.js';
 import { langResources } from './lang';
@@ -141,10 +141,10 @@ export class D2LNote extends LocalizeMixin(LitElement) {
 	candelete: boolean = false;
 
 	/**
-	 * d2l-intl date format to user
+	 * value for "format" property of @brightspace-ui/intl formatDateTime options
 	 */
 	@property({ type: String })
-	dateformat: string = 'medium';
+	dateformat: keyof DateTimeDescriptor['formats']['timeFormats'] = 'medium';
 
 	/**
 	 * Indicates whether the note is beting editted
@@ -244,9 +244,7 @@ export class D2LNote extends LocalizeMixin(LitElement) {
 		const userName = this.showavatar ? this.me ? this.localize('me') : this.user ? this.user.name : undefined : undefined;
 
 		const createdAtDate = this.createdat ? new Date(this.createdat) : null;
-		const date = createdAtDate ? formatDateTime(createdAtDate, { format: this.dateformat || 'medium' }) : undefined;
-		// Need this step because the formatter doesn't parse the time when using a custom format
-		const dateTime = createdAtDate ? formatTime(createdAtDate, { format: date }) : undefined;
+		const dateTime = createdAtDate ? formatDateTime(createdAtDate, { format: this.dateformat || 'medium' }) : undefined;
 
 		const subText = dateTime ? this.updatedat ? this.localize('subtextEdited', { '0': dateTime }) : dateTime : '';
 		const showDropdown = this.canedit || this.candelete;
