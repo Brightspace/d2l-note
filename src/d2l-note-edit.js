@@ -273,11 +273,10 @@ export class D2LNoteEdit extends LocalizeMixin(LitElement) {
 
 				textarea.d2l-input.d2l-note-edit-error:hover,
 				textarea.d2l-input.d2l-note-edit-error:focus {
-					border-color: var(--d2l-alert-critical-color, --d2l-color-cinnabar);
+					border-color: var(--d2l-color-feedback-error, --d2l-color-cinnabar);
 					border-width: 2px;
 					outline-style: none;
 					outline-width: 0;
-					padding: var(--d2l-input-padding-focus);
 				}
 
 				textarea.d2l-input::placeholder {
