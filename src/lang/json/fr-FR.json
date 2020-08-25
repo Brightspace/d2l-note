@@ -1,0 +1,14 @@
+{
+   "add" : "Ajouter",
+   "contextMenu" : "Menu contextuel",
+   "delete" : "Supprimer",
+   "discard" : "Ignorer",
+   "edit" : "Modifier",
+   "empty" : "Aucune note",
+   "less" : "Charger moins de notes",
+   "me" : "Moi",
+   "more" : "Charger plus de notes",
+   "private" : "Privé",
+   "save" : "Enregistrer",
+   "subtextEdited" : "{0} (modifié)"
+}
