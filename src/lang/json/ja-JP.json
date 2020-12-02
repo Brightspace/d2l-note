@@ -1,9 +1,9 @@
 {
    "add" : "追加",
    "contextMenu" : "コンテキストメニュー",
-   "delete" : "削除",
+   "delete" : "削除:",
    "discard" : "破棄",
-   "edit" : "編集",
+   "edit" : "の編集",
    "empty" : "メモなし",
    "less" : "読み込むメモの量を減らす",
    "me" : "自分",
