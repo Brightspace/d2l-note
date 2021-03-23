@@ -1,0 +1,14 @@
+{
+   "add" : "Tilføj",
+   "contextMenu" : "Context Menu",
+   "delete" : "Slet",
+   "discard" : "Kassér",
+   "edit" : "Rediger",
+   "empty" : "No Notes",
+   "less" : "Load Less Notes",
+   "me" : "Mig",
+   "more" : "Load More Notes",
+   "private" : "Private",
+   "save" : "Gem",
+   "subtextEdited" : "{0} (Edited)"
+}
