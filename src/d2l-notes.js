@@ -262,7 +262,7 @@ export class D2LNotes extends LocalizeMixin(LitElement) {
 
 				.d2l-notes-enter-note-string,
 				.d2l-note-emptystring {
-					line-height: 1;
+					line-height: 1.4;
 					margin-bottom: 0.6rem;
 				}
 			</style>
