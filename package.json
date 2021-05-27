@@ -20,7 +20,7 @@
   "dependencies": {
     "@brightspace-ui/core": "^1",
     "@brightspace-ui/intl": "^3.0.1",
-    "@d2l/user-elements": "^3",
+    "@d2l/user-elements": "^4",
     "@polymer/iron-a11y-announcer": "^3.0.2",
     "@polymer/polymer": "^3.0.0",
     "d2l-alert": "github:BrightspaceUI/alert#semver:^4",
